@@ -1,5 +1,5 @@
-// import PostItem from "../../components/PostItem";
-// import LatestItem from "../../components/LatestItem";
+import PostItem from "../../Components/PostItem/PostItem";
+import LatestItem from "../../Components/LatestItem/LatestItem";
 import {useEffect, useState} from "react";
 
 const Home = () => {

@@ -64,10 +64,13 @@
 
 
 .search-div .search-1 {
-    width: 16.2rem;
-    height: 3rem;
     position: relative;
     display: flex;
+    align-items: center;
+    size: 2.2rem;
+    height: 8rem;
+    width: 16.2rem;
+    margin: 20px 20px;
 }
 
 .search-div .input-field {
@@ -88,7 +91,7 @@
 
 .search-div .btn-search {
     width: 4rem;
-    height: 3rem;
+    height: 33px;
     border: 1px solid #191818;
     background: #191818;
     text-align: center;
@@ -98,6 +101,5 @@
 }
 
 .search-icn {
-    margin-bottom: 25%;
-    margin-left: 1rem;
+    margin-bottom: 20%;
 }
