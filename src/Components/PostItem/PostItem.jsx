@@ -1,16 +1,19 @@
-const PostItem = ({postData}) => {
+import React from "react";
+
+const PostItem = (postData) => {
+
   return (
     <div className="col-xl-4 col-lg-6 col-md-10 col-sm-6 pb-4">
-      <div key={postData.id} className="post" style={{
-        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(${postData.image})`,
+      <div key='' className="post" style={{
+        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1, )))`,
       }}>
         <div className="brief"><a className="brief-text"
                                   href="#">Weekly Brief</a></div>
-        <a className="post-title" href={postData.url} target="_blank" rel="noreferrer">
-          {postData.headline.substring(0, 29)}...
+        <a className="post-title" href='' target="_blank" rel="noreferrer">
+          {/*{postData.headline.substring(0, 29)}...*/}
         </a>
         <h5 className="postSummary">
-          {postData.summary.substring(0, 80)}...
+          {/*{postData.summary.substring(0, 80)}...*/}
         </h5>
         <div className="bookmark">
           <button className="bookmark-button">

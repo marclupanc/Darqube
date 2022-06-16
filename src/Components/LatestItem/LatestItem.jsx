@@ -1,4 +1,17 @@
-const LatestItem = ({latestPostData}) => {
+import {useDispatch, useSelector} from "react-redux";
+import {getNews} from "../../redux/News/selectors";
+import React, {useEffect} from "react";
+import {fetchNewsBegin} from "../../redux/News/actions";
+
+const LatestItem = () => {
+
+  const dispatch = useDispatch();
+  const news = useSelector(getNews);
+
+  useEffect(() =>{
+    dispatch(fetchNewsBegin())
+  },[])
+
   return (
     <div className="section-main">
       <div className="main-post">
@@ -21,14 +34,14 @@ const LatestItem = ({latestPostData}) => {
           </svg>
         </div>
         <div className="main-post-title">
-          {latestPostData[0]?.headline.substring(0, 28)}
+          {news[0]?.headline.substring(0, 28)}
         </div>
         <div className="mainPostSummary">
-          {latestPostData[0]?.summary.substring(0, 100)}...
+          {news[0]?.summary.substring(0, 100)}...
         </div>
         <div className="line"></div>
         <div className="read">
-          <a className="readText " href={latestPostData[0]?.url} rel="noreferrer" target="_blank">Read the research</a>
+          <a className="readText " href={news[0]?.url} rel="noreferrer" target="_blank">Read the research</a>
         </div>
         <div className="date">17 Feb</div>
         <div className="bookmark">
@@ -44,7 +57,7 @@ const LatestItem = ({latestPostData}) => {
         <div className="overlay">
           <div className="latestBackground"
                style={{
-                 background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(${latestPostData[0]?.image})`,
+                 background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(${news[0]?.image})`,
                }}></div>
         </div>
       </div>

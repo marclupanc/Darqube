@@ -1,21 +1,27 @@
-import PostItem from "../../Components/PostItem/PostItem";
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchNewsBegin} from "../../redux/News/actions";
+import {getNews} from "../../redux/News/selectors";
 import LatestItem from "../../Components/LatestItem/LatestItem";
-import {useEffect, useState} from "react";
+import PostItem from "../../Components/PostItem/PostItem";
 
 const Home = () => {
-  const [news, setNews] = useState([]);
 
-  useEffect(() => {
-    fetch('https://finnhub.io/api/v1/company-news?symbol=AAPL&from=2021-03-01&to=2021-03-15&token=bpjsf67rh5r9328ecgvg')
-      .then(response => response.json())
-      .then(responseData => setNews(responseData))
-  }, [])
+  const dispatch = useDispatch();
+  const news = useSelector(getNews);
+
+     useEffect(() =>{
+       dispatch(fetchNewsBegin())
+     },[])
+
+  const postItems = news.splice(1, 7);
+  console.log(postItems);
 
   return (
     <div className='container'>
       <div className="row">
         <div className="col-xl-4 col-lg-6 col-md-6 pb-4 latest">
-          {<LatestItem latestPostData={news}/>}
+          {<LatestItem/>}
         </div>
         <div className="col-xl-8 col-lg-6 col-md-6 ">
           <div className="row phones">
@@ -33,6 +39,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  );
-};
+    )
+}
+
 export default Home;
