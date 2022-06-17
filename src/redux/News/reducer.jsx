@@ -13,8 +13,6 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_NEWS_BEGIN:
-      console.log("start");
-
       return {
         ...state,
         loading: true,
@@ -22,8 +20,6 @@ export default function reducer(state = initialState, action) {
       };
 
     case FETCH_NEWS_SUCCESS:
-      console.log("success", action.payload);
-
       return {
         ...state,
         loading: false,
@@ -31,8 +27,6 @@ export default function reducer(state = initialState, action) {
       };
 
     case FETCH_NEWS_FAILURE:
-      console.log("fail");
-
       return {
         ...state,
         loading: false,

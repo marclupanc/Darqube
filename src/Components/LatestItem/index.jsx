@@ -21,8 +21,8 @@ const LatestItem = () => {
         </div>
 
         <div className="brief">
-          <a className="brief-text" href="#">
-            Weekly Brief
+          <a className="brief-text" href={news[0]?.url} target="_blank">
+            {news[0]?.source}
           </a>
         </div>
         <div className="arrow-icon">
@@ -34,17 +34,17 @@ const LatestItem = () => {
             <path
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="32"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="32"
               d="M262.62 336L342 256l-79.38-80M330.97 256H170"
             />
             <path
               d="M256 448c106 0 192-86 192-192S362 64 256 64 64 150 64 256s86 192 192 192z"
               fill="none"
               stroke="currentColor"
-              stroke-miterlimit="10"
-              stroke-width="32"
+              strokeMiterlimit="10"
+              strokeWidth="32"
             />
           </svg>
         </div>

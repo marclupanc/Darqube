@@ -10,7 +10,7 @@ export default function reducer(state = initialState, action) {
       console.log("Add bookmark");
       return {
         ...state,
-        allBookmarks: action.payload.addBookmark,
+        allBookmarks: [...state.allBookmarks, action.payload],
       };
 
     default:

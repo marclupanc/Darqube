@@ -1,10 +1,13 @@
 import "./styles.css";
+import { addToBookmarks } from "../../redux/Bookmarks/actions";
+import { useDispatch } from "react-redux";
 
 const PostItem = ({ postData }) => {
-  console.log(postData);
+  const dispatch = useDispatch();
 
   const addToBookmark = (data) => {
-    //todo: dispatch addToBookmark(data)
+    dispatch(addToBookmarks(data));
+    console.log("hello");
   };
   return (
     <div
@@ -15,8 +18,8 @@ const PostItem = ({ postData }) => {
       }}
     >
       <div className="brief">
-        <a className="brief-text" href="#">
-          Weekly Brief
+        <a className="brief-text" href={postData.url} target="_blank">
+          {postData.source}
         </a>
       </div>
       <a
@@ -29,7 +32,12 @@ const PostItem = ({ postData }) => {
       </a>
       <h5 className="postSummary">{postData.summary.substring(0, 80)}...</h5>
       <div className="bookmark">
-        <button className="bookmark-button" onClick={addToBookmark}>
+        <button
+          className="bookmark-button"
+          onClick={() => {
+            addToBookmark(postData);
+          }}
+        >
           <svg
             width="18"
             height="18"
