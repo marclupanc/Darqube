@@ -1,0 +1,28 @@
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.pages-btn {
+    display: flex;
+    gap: 20px;
+
+}
+
+.previous {
+    width: 115px;
+    height: 25px;
+    background-color: #3C3C3C;
+    border-radius: 60px;
+    color: white;
+}
+
+.next {
+    color: white;
+    width: 115px;
+    height: 25px;
+    background-color: #3C3C3C;
+    border-radius: 60px;
+}

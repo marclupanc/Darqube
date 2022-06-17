@@ -1,0 +1,137 @@
+.section-main {
+    max-height: 630px;
+    position: relative;
+}
+
+.main-post {
+    border-radius: 7px;
+    height: 628px;
+    position: relative;
+}
+
+.latestBackground {
+    height: 628px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.latest-research {
+    opacity: 100% !important;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 9px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    width: 12rem;
+    height: 2.5rem;
+    background-color: #B73556;
+    text-align: center;
+    padding-top: 7px;
+
+}
+
+.brief {
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    width: 120px;
+    height: 28px;
+    border: solid 1px;
+    border-radius: 30px;
+    color: white;
+}
+
+.brief-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: auto;
+    font-size: 13px;
+    font-weight: 700;
+
+}
+
+.main-post-title {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    max-width: 90%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: white;
+}
+
+.mainPostSummary {
+    position: absolute;
+    top: 78%;
+    left: 5%;
+    max-width: 90%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 80%;
+    color: white;
+}
+
+
+.arrow-icon {
+    position: absolute;
+    top: 86.8%;
+    left: 5%;
+    height: 20px;
+    width: 20px;
+    color: #ffffff;
+}
+
+.read {
+    position: absolute;
+    top: 90%;
+    left: 12%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+
+.read:hover {
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+.date {
+    position: absolute;
+    left: 50%;
+    top: 89.7%;
+    font-size: 1.2rem;
+    opacity: 0.75;
+    color: white;
+}
+
+.line {
+    height: 20px;
+    width: 1px;
+    border-left: solid 1px;
+    opacity: 0.5;
+    position: absolute;
+    top: 89.3%;
+    left: 45%;
+}
+
+.bookmark .bookmark-button {
+    position: absolute;
+    top: 89.6%;
+    left: 90%;
+    opacity: 0.75;
+    color: white;
+}

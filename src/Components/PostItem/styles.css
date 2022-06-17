@@ -1,0 +1,52 @@
+
+.post {
+    display: flex;
+    flex-direction: column;
+    height: 515px;
+    background: linear-gradient(180deg, rgba(28, 58, 82, 0) 0%, #05141B 75.5%);
+    font-size: 2rem;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+}
+
+
+.post-title {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    max-width: 90%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.postSummary {
+    position: absolute;
+    top: 82%;
+    left: 5%;
+    max-width: 90%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 70%;
+    color: white;
+
+}
+
+@media (max-width: 575px) {
+    .post {
+        max-width: 280px;
+
+    }
+
+    .phones {
+        align-items: center;
+
+    }
+}

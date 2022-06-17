@@ -29,19 +29,6 @@
     font-weight: 700;
 }
 
-@media (max-width: 460px) {
-    .main-nav {
-        gap: 0;
-        flex-direction: column;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    .search-div .search-1 {
-        width: 26.2rem !important;
-    }
-}
-
 .menu {
     display: flex;
     gap: 2rem;
@@ -49,18 +36,16 @@
     padding: 0;
 }
 
-.button:hover {
-    text-decoration: none;
+.link {
+    color: rgba(255, 255, 255, 0.5);
+}
+.link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+.active {
     color: white;
 }
 
-.btn-bookmarks {
-    color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.btn-news {
-    color: white;
-}
 
 
 .search-div .search-1 {
@@ -102,4 +87,17 @@
 
 .search-icn {
     margin-bottom: 20%;
+}
+
+@media (max-width: 460px) {
+    .main-nav {
+        gap: 0;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .search-div .search-1 {
+        width: 26.2rem !important;
+    }
 }

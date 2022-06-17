@@ -14,8 +14,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     line-height: 1;
     font-weight: 400;
-
-
 }
 
 p {
@@ -23,11 +21,13 @@ p {
 }
 
 a {
-    color: #ffffff !important;
-    text-decoration: none !important;
+    color: #ffffff;
+    text-decoration: none;
     background-color: transparent;
 }
-
+a:hover{
+    color: white;
+}
 button {
     background-color: transparent;
     border: none;
@@ -49,243 +49,10 @@ button {
     text-align: center;
 }
 
+
+
 @media (min-width: 1470px) {
     .container {
         max-width: 1440px !important;
     }
-}
-
-
-/*------------- MAIN BOX -------------*/
-.section-main {
-    max-height: 630px;
-    position: relative;
-}
-
-.main-post {
-    border-radius: 7px;
-    height: 628px;
-    position: relative;
-}
-
-.latestBackground {
-    height: 628px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/*.overlay {*/
-/*    background: rgba(50, 70, 80, 0.7);*/
-/*    overflow: hidden;*/
-/*    height: 100%;*/
-/*}*/
-
-.latest-research {
-    opacity: 100% !important;
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 9px;
-    letter-spacing: 0.06em;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    width: 12rem;
-    height: 2.5rem;
-    background-color: #B73556;
-    text-align: center;
-    padding-top: 7px;
-
-}
-
-.brief {
-    margin-left: 10px;
-    margin-top: 10px;
-    float: left;
-    width: 120px;
-    height: 28px;
-    border: solid 1px;
-    border-radius: 30px;
-}
-
-.brief-text {
-    display: flex;
-    justify-content: center;
-    margin-top: 4%;
-    margin-bottom: auto;
-    font-size: 13px;
-    font-weight: 700;
-
-}
-
-.main-post-title {
-    position: absolute;
-    top: 70%;
-    left: 5%;
-    max-width: 90%;
-    text-align: left;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    /*color: #000000;*/
-}
-
-.mainPostSummary {
-    position: absolute;
-    top: 78%;
-    left: 5%;
-    max-width: 90%;
-    text-align: left;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    opacity: 80%;
-}
-
-
-.arrow-icon {
-    position: absolute;
-    top: 86.8%;
-    left: 5%;
-    height: 20px;
-    width: 20px;
-    color: #ffffff;
-}
-
-.read {
-    position: absolute;
-    top: 90%;
-    left: 12%;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
-}
-
-
-.read:hover {
-    opacity: 0.7;
-    transition: opacity 1s;
-}
-
-.date {
-    position: absolute;
-
-    left: 50%;
-    top: 89.7%;
-    font-size: 1.2rem;
-    opacity: 0.75;
-}
-
-.line {
-    height: 20px;
-    width: 1px;
-    border-left: solid 1px;
-    opacity: 0.5;
-    position: absolute;
-    top: 89.3%;
-    left: 45%;
-}
-
-.bookmark .bookmark-button {
-    position: absolute;
-    top: 87.6%;
-    left: 90%;
-    opacity: 0.75;
-    color: black;
-}
-
-/*------------- RECENT BOXES -------------*/
-
-.post {
-    display: flex;
-    flex-direction: column;
-    height: 425px;
-    background: linear-gradient(180deg, rgba(28, 58, 82, 0) 0%, #05141B 75.5%);
-    font-size: 2rem;
-    margin: 0 auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-
-/*.phones {*/
-/*    justify-content: center;*/
-/*}*/
-
-@media (max-width: 575px) {
-    .post {
-        max-width: 280px;
-
-    }
-
-    .phones {
-        align-items: center;
-    }
-}
-
-/*--------------FRAMES -------------*/
-.post-title {
-    position: absolute;
-    top: 65%;
-    left: 5%;
-    max-width: 90%;
-    text-align: left;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-.postSummary {
-    position: absolute;
-    top: 82%;
-    left: 5%;
-    max-width: 90%;
-    text-align: left;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    opacity: 70%;
-
-}
-
-.show-hide {
-    display: none;
-}
-
-
-/*--------------PAGES NAV -------------*/
-.page-navigation {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.7rem;
-    color: white;
-}
-
-.pages-btn {
-    display: flex;
-    gap: 20px;
-
-}
-
-.previous {
-    width: 115px;
-    height: 25px;
-    background-color: #3C3C3C;
-    border-radius: 60px;
-    color: white;
-}
-
-.next {
-    color: white;
-    width: 115px;
-    height: 25px;
-    background-color: #3C3C3C;
-    border-radius: 60px;
 }

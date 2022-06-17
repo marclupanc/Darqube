@@ -1,1 +1,1 @@
-export const getNews = (store) => store.news.news
+export const getNews = (store) => store.news.news;
