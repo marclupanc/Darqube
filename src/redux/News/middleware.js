@@ -11,6 +11,7 @@ export const getNewsMiddleware = (store) => (dispatch) => (action) => {
         });
       break;
   }
+
   return dispatch(action);
 };
 

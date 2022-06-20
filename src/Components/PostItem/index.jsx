@@ -1,14 +1,23 @@
 import "./styles.css";
-import { addToBookmarks } from "../../redux/Bookmarks/actions";
-import { useDispatch } from "react-redux";
+import {
+  addToBookmarks,
+  removeFromBookmarks,
+} from "../../redux/Bookmarks/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { getBookmarks } from "../../redux/Bookmarks/selectors";
+import { BookmarkedSvg, BookmarkSvg } from "../../svgees";
 
 const PostItem = ({ postData }) => {
   const dispatch = useDispatch();
+  const bookmarks = useSelector(getBookmarks);
+  const isBookmarked = bookmarks.map((i) => i.id).includes(postData.id);
 
-  const addToBookmark = (data) => {
-    dispatch(addToBookmarks(data));
-    console.log("hello");
+  const toggleBookmark = (post) => {
+    dispatch(
+      isBookmarked ? removeFromBookmarks(post.id) : addToBookmarks(post)
+    );
   };
+
   return (
     <div
       key=""
@@ -35,21 +44,10 @@ const PostItem = ({ postData }) => {
         <button
           className="bookmark-button"
           onClick={() => {
-            addToBookmark(postData);
+            toggleBookmark(postData);
           }}
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 13 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.76398 2.47487V9.79632L5.71358 8.56012L6.48257 8.23783L7.25277 8.55722L10.2703 9.80856V2.47487H2.76398ZM0.763977 0.474869H12.2703V12.8031L6.48665 10.4047L0.763977 12.8031V0.474869Z"
-              fill="white"
-            />
-          </svg>
+          {isBookmarked ? <BookmarkedSvg /> : <BookmarkSvg />}
         </button>
       </div>
     </div>

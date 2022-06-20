@@ -9,7 +9,6 @@ import Pagination from "../../Components/Pagination";
 const News = () => {
   const dispatch = useDispatch();
   const news = useSelector(getNews);
-
   useEffect(() => {
     dispatch(fetchNewsBegin());
   }, []);

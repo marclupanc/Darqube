@@ -9,7 +9,6 @@ import { getBookmarks } from "../../redux/Bookmarks/selectors";
 const Bookmarks = () => {
   const dispatch = useDispatch();
   const bookmarks = useSelector(getBookmarks);
-  console.log("log", bookmarks);
 
   useEffect(() => {
     dispatch(fetchNewsBegin());
