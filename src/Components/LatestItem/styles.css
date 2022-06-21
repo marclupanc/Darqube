@@ -20,7 +20,7 @@
     opacity: 100% !important;
     float: right;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-style: normal;
     font-weight: 700;
     font-size: 1rem;
@@ -38,7 +38,7 @@
 
 .brief {
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     float: left;
     width: 120px;
     height: 28px;

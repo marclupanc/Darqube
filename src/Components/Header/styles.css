@@ -85,7 +85,8 @@
 }
 
 .search-icn {
-    margin-bottom: 20%;
+    margin-bottom: 0;
+
 }
 
 @media (max-width: 460px) {

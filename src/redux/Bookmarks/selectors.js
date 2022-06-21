@@ -1,1 +1,1 @@
-export const getBookmarks = (store) => store.allBookmarks.allBookmarks;
+export const getBookmarks = (store) => store.bookmarks.allBookmarks;

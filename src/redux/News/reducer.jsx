@@ -5,7 +5,8 @@ import {
 } from "./actions";
 
 const initialState = {
-  news: [],
+  allNews: [],
+  paginatedNews: [],
   loading: false,
   error: null,
 };
@@ -23,7 +24,8 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        news: action.payload.allNews,
+        allNews: action.payload.allNews,
+        paginatedNews: action.payload.allNews.slice(1, 7),
       };
 
     case FETCH_NEWS_FAILURE:
@@ -31,7 +33,8 @@ export default function reducer(state = initialState, action) {
         ...state,
         loading: false,
         error: action.payload.error,
-        news: [],
+        allNews: [],
+        paginatedNews: [],
       };
 
     default:

@@ -1,23 +1,33 @@
 import "./styles.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import { getNews } from "../../redux/News/selectors";
+import { getAllNews } from "../../redux/News/selectors";
 import React, { useEffect } from "react";
 import { fetchNewsBegin } from "../../redux/News/actions";
-import { addToBookmarks } from "../../redux/Bookmarks/actions";
+
+import {
+  addToBookmarks,
+  removeFromBookmarks,
+} from "../../redux/Bookmarks/actions";
+
 import { BookmarkedSvg, BookmarkSvg } from "../../svgees";
+import { getBookmarks } from "../../redux/Bookmarks/selectors";
 
 const LatestItem = () => {
   const dispatch = useDispatch();
-  const news = useSelector(getNews);
+  const news = useSelector(getAllNews);
+  const bookmarks = useSelector(getBookmarks);
+  const isBookmarked = bookmarks.map((i) => i.id).includes(news[0]?.id);
+
+  const toggleBookmark = (post) => {
+    dispatch(
+      isBookmarked ? removeFromBookmarks(post.id) : addToBookmarks(post)
+    );
+  };
 
   useEffect(() => {
     dispatch(fetchNewsBegin());
   }, []);
-
-  const addToBookmark = (post) => {
-    dispatch(addToBookmarks(post));
-  };
 
   return (
     <div className="section-main">
@@ -76,10 +86,10 @@ const LatestItem = () => {
           <button
             className="bookmark-button"
             onClick={() => {
-              addToBookmark(news[0]);
+              toggleBookmark(news[0]);
             }}
           >
-            <BookmarkSvg />
+            {isBookmarked ? <BookmarkedSvg /> : <BookmarkSvg />}
           </button>
         </div>
         <div className="overlay">
